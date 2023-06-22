@@ -1,0 +1,30 @@
+.menu-links {
+  padding-top: 50px;
+}
+.menu-links a {
+  display: inline;
+  padding-right: 20px;
+}
+/* .menu-links a:last-child {
+    padding-left: 20px;
+} */
+.banner {
+  padding: 0;
+  position: relative;
+}
+
+.banner a {
+  text-decoration: none;
+  padding: 10px 41px;
+  color: white;
+  background: linear-gradient(100.03deg, #e798c6 25.36%, #9c98e6 106.07%);
+  border-radius: 41px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 145%;
+  z-index: 1000;
+  position: absolute;
+  margin-top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
