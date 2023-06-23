@@ -1,0 +1,72 @@
+:root {
+    --card-width: calc(150px + 160 * ((100vw - 330px) / (650 - 330)));
+    --card-height: calc(209px + 254 * ((100vw - 330px) / (650 - 330)));
+
+   
+  }
+
+.store-wrapper {
+    display: flex;
+  flex-wrap: wrap;
+    margin: 40px 10px 50px;
+    justify-content: space-around;
+    position: static;
+
+}
+
+.cat-list {
+width: 70%;
+margin: 75px auto 0;
+
+}
+.cat-list a{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* выравнивание по левому краю */
+    text-align: center;
+
+    text-decoration: none;
+    padding: 4px 21px;
+    color: white;
+    background: linear-gradient(100.03deg, #e798c6 25.36%, #9c98e6 106.07%);
+    border-radius: 41px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 145%;
+    /* position: absolute; */
+    /* margin: 45px auto 45px; */
+    margin: 0 auto;
+    
+  
+}
+
+.arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    left: 17px;
+}
+
+.store-inner img{
+    width: calc(310px + 19 * ((100vw - 430px) / (1080 - 430)));
+    height: calc(463px + 62 * ((100vw - 430px) / (1080 - 430)));
+    flex-wrap: nowrap;
+    /* width: 310px; */
+    /* height: 463px; */
+    border-radius: 10px;
+}
+
+.store-inner p{
+    margin: 0 auto 15px;
+    
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .store-inner img{
+        width: var(--card-width);
+        height: var(--card-height);
+    }
+}

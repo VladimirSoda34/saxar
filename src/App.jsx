@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import { SimpleSlider } from "./Components/SimpleSlider";
 import MenuList from "./Components/MenuList/MenuList"
-import Slider from "./Components/Slider/Slider"
 import Banner from "./Components/Banner/Banner"
+import Store from "./Components/Store/Store"
 import WB from "./images/WB.svg"
 import OZON from "./images/OZON.svg"
 
@@ -25,10 +25,12 @@ function App() {
 
   useEffect(() => {
     axios.get(baseURL).then((response) => {
-      setCards(response.data.items)
+      const data = response.data.items
+      setCards(data)
       setMenuList(response.data.items.map((card) => card.category))
     })
   }, [])
+
 
   console.log(menuList)
 
@@ -47,7 +49,6 @@ function App() {
           <li className="menu-item">
             <a href="#">Популярное</a>
           </li>
-
           <MenuList menuList={menuList} />
           <br />
           <li className="menu-item">
@@ -75,6 +76,7 @@ function App() {
         <p className="slider-title">ПОПУЛЯРНОЕ</p>
       </div>
         <SimpleSlider />
+        <Store cards={cards} />
     </div>
   )
 }

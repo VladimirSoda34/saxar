@@ -15,6 +15,7 @@
 }
 
 .banner a {
+  cursor: pointer;
   text-decoration: none;
   padding: 10px 41px;
   color: white;

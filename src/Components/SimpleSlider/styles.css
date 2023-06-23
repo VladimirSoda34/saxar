@@ -5,15 +5,13 @@
    
   }
 
-.card-wrapper {
+/* .card-wrapper {
     margin-top: 30px;
-}
+} */
 .card-wrapper p{
     text-align: center;
 }
-.img-wrapper {
-    /* height: 455px; */
-}
+
 
 .img-wrapper img{
     width: 95%;
