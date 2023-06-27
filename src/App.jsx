@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { SimpleSlider } from "./Components/SimpleSlider";
+import { SimpleSlider } from "./Components/SimpleSlider"
 import MenuList from "./Components/MenuList/MenuList"
 import Banner from "./Components/Banner/Banner"
 import Store from "./Components/Store/Store"
@@ -17,7 +17,8 @@ const baseURL =
 function App() {
   const [cards, setCards] = useState(null)
   const [menuList, setMenuList] = useState([])
-  const [cardId, setCardId] = useState([])
+  // const [cardId, setCardId] = useState("")
+  const [cardMod, setCardMod] = useState([])
   const [isToggled, setIsToggled] = useState(false)
   const headerClass = `header ${isToggled && "menu-opened"}`
 
@@ -25,7 +26,7 @@ function App() {
     setIsToggled(!isToggled)
   }
 
-  const cardMod = cards?.find(obj => obj.id === cardId);
+  // const cardMod = cards?.find(obj => obj.id === cardId);
 
   useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -34,12 +35,13 @@ function App() {
       setMenuList(response.data.items.map((card) => card.category))
     })
   }, [])
+  
+  // console.log(menuList)
+  // console.log(cardMod)
+  
+  // console.log(cardId)
+ 
 
-
-  console.log(menuList)
-  console.log(cardMod);
-
-  console.log(cards)
   return (
     <div className="window">
       <div id="header" className={headerClass}>
@@ -78,18 +80,22 @@ function App() {
       </div>
       <div className="content">
         <Banner />
-        <p className="title" style={{textAlign: 'center'}}>популярное</p>
+        <p className="title" style={{ textAlign: "center" }}>
+          популярное
+        </p>
       </div>
 
-        <SimpleSlider />
-        <Store cards={cards} setCardId={setCardId} cardMod={cardMod} />
+      <SimpleSlider cardMod={cardMod} setCardMod={setCardMod} />
+      <Store cards={cards} cardMod={cardMod} setCardMod={setCardMod}/>
       <div className="inner-container">
         <p className="title">почему мы?</p>
         <Advantages />
-        <p className="title">Это –<br/> Saxar.Showroom</p>
+        <p className="title">
+          Это –<br /> Saxar.Showroom
+        </p>
         <AboutUs />
       </div>
-        <Footer cardId={cardId} />
+      <Footer  />
     </div>
   )
 }

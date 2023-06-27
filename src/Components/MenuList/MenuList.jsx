@@ -6,7 +6,7 @@ function MenuList({menuList}) {
   const list = menuList.filter((value, index) => {
     return menuList.indexOf(value) === index;
   })
-  console.log(list);
+  
   return (
     <>
     {list.map((itm, index)=>(

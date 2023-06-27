@@ -5,7 +5,8 @@ import "./styles.css"
 import ARROW from "../../images/arrow.svg"
 
 
-function Store({cards, setCardId, cardModal}) {
+function Store({cards,cardMod,setCardMod}) {
+
 
   const [modal, setModal] = useState({
     modal1: false,
@@ -13,17 +14,18 @@ function Store({cards, setCardId, cardModal}) {
   });
 
   const hedlerClick = (e) => {
+    let id = ""
 
     setModal({
       ...modal,
       modal1: true,
     });
-    
-
-      setCardId(e.target.id)
-    
+    id = e.target.id
+    setCardMod((prevArray => [...prevArray, cards.find(obj => obj.id === id)]))
   }
+  
 
+  
 
   return (
     <>
@@ -46,7 +48,7 @@ function Store({cards, setCardId, cardModal}) {
         
     ))}
     </div>
-    <CardModal isOpened={modal.modal1} onModalClose={() => setModal({ ...modal, modal1: false })} cardModal={cardModal}/>
+    <CardModal isOpened={modal.modal1} onModalClose={() => setModal({ ...modal, modal1: false })} cardMod={cardMod} setCardMod={setCardMod}/>
     </>
   )
 }
