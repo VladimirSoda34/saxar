@@ -1,0 +1,19 @@
+.footer-wrapper {
+    background: linear-gradient(100.03deg, #E798C6 25.36%, #9C98E6 106.07%);
+    color: white;
+    padding: 0 10px;
+}
+
+.footer-wrapper p:first-child {
+padding-top: 16px;
+text-align: center;
+font-size: 27px;
+}
+.footer-wrapper p:last-child {
+    font-size: 12px;
+    padding-bottom: 14px;
+}
+.footer-wrapper a {
+    font-size: 14px;
+    text-transform: uppercase;
+}

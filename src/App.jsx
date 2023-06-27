@@ -4,8 +4,9 @@ import { SimpleSlider } from "./Components/SimpleSlider";
 import MenuList from "./Components/MenuList/MenuList"
 import Banner from "./Components/Banner/Banner"
 import Store from "./Components/Store/Store"
-import WB from "./images/WB.svg"
-import OZON from "./images/OZON.svg"
+import Advantages from "./Components/Advantages/Advantages"
+import AboutUs from "./Components/AboutUs/AboutUs"
+import Footer from "./Components/Footer/Footer"
 
 import "./Styles/style.css"
 import "./Styles/app.css"
@@ -16,12 +17,15 @@ const baseURL =
 function App() {
   const [cards, setCards] = useState(null)
   const [menuList, setMenuList] = useState([])
+  const [cardId, setCardId] = useState([])
   const [isToggled, setIsToggled] = useState(false)
   const headerClass = `header ${isToggled && "menu-opened"}`
 
   const handleClickHeader = () => {
     setIsToggled(!isToggled)
   }
+
+  const cardMod = cards?.find(obj => obj.id === cardId);
 
   useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -33,6 +37,7 @@ function App() {
 
 
   console.log(menuList)
+  console.log(cardMod);
 
   console.log(cards)
   return (
@@ -60,10 +65,10 @@ function App() {
           <li className="menu-item">
             <div className="menu-links">
               <a href="#">
-                <img src={WB} alt="" />
+                <img src="./WB.svg" alt="" />
               </a>
               <a href="#">
-                <img src={OZON} alt="" />
+                <img src="./OZON.svg" alt="" />
               </a>
               <a href="#">WHATSAPP</a>
             </div>
@@ -73,10 +78,18 @@ function App() {
       </div>
       <div className="content">
         <Banner />
-        <p className="slider-title">ПОПУЛЯРНОЕ</p>
+        <p className="title" style={{textAlign: 'center'}}>популярное</p>
       </div>
+
         <SimpleSlider />
-        <Store cards={cards} />
+        <Store cards={cards} setCardId={setCardId} cardMod={cardMod} />
+      <div className="inner-container">
+        <p className="title">почему мы?</p>
+        <Advantages />
+        <p className="title">Это –<br/> Saxar.Showroom</p>
+        <AboutUs />
+      </div>
+        <Footer cardId={cardId} />
     </div>
   )
 }

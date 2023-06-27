@@ -1,0 +1,20 @@
+.about-wrapper {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+.about-img{
+    margin: 0 auto;
+    width: calc(100% - 20px);
+}
+
+.about-img img {
+    
+    /* width: 424px; */
+    width: 100%;
+    /* width: calc(100% - 20px); */
+    /* width: calc(300px + 124 * ((100vw - 130px) / (450 - 130))); */
+}
+.about-desc p {
+    font-size: 14px;
+}

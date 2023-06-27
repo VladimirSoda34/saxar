@@ -199,3 +199,28 @@
     opacity: .75;
     color: black;
 }
+
+@media (max-width: 650px) {
+.slick-dots li button:before
+{
+    top: -70px;
+    left: calc(-128px - 88 * ((100vw - 430px) / (650 - 430)));
+    /* left: -88px; */
+    opacity: .85;
+
+}
+    .slick-dots li button:before {
+        opacity: .25;
+    color: white;
+    opacity: .85;
+
+
+    }
+.slick-dots li.slick-active button:before {
+    color: #959595;
+
+
+}
+
+
+}

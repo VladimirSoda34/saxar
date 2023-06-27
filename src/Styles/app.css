@@ -1,4 +1,8 @@
-
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
 .menu-links {
   padding-top: 50px;
 }
@@ -15,10 +19,7 @@
 }
 
 .banner a {
-  cursor: pointer;
-  text-decoration: none;
   padding: 10px 41px;
-  color: white;
   background: linear-gradient(100.03deg, #e798c6 25.36%, #9c98e6 106.07%);
   border-radius: 41px;
   font-size: 14px;
@@ -30,11 +31,14 @@
   transform: translateX(-50%);
 }
 
-.slider-title {
+.title {
   text-transform: uppercase;
   font-size: 24px;
   font-family: Geometria;
   letter-spacing: 0.72px;
-  text-align: center;
-  margin-top: 33px;
+  margin: 33px 0 12px;
+}
+
+.inner-container {
+  padding: 0 10px;
 }

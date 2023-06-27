@@ -1,0 +1,134 @@
+a {
+  text-decoration: none;
+}
+
+.modal__wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+}
+
+.modal__wrapper.open {
+  height: 100%;
+  display: block;
+}
+
+.modal__wrapper.close {
+  height: 0;
+  display: none;
+}
+
+.modal__body {
+  max-width: 500px;
+  margin: auto;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.modal__body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.modal__close {
+  text-align: right;
+  margin-top: -15px;
+  color: rgb(79, 79, 79);
+  cursor: pointer;
+}
+
+.titlePurchase {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.listPurchase {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  
+  color: rgb(118, 63, 132);
+}
+
+.allPurchase {
+  margin: 10px 0 10px 5px;
+}
+
+
+.totalPrise {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 24px;
+  color: rgb(15 101 87);
+  font-weight: 700;
+
+}
+
+
+.purchase {
+  display: none;
+}
+
+legend {
+  text-align: center;
+  font-size: 24px;
+}
+
+form {
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px; 
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgb(85, 61, 86);
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="password"],
+select {
+  margin-bottom: 10px;
+  padding: 2px 5px;
+  width: 95%;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* font-family: "Roboto"; */
+}
+input[type="submit"] {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 6px 15px;
+  width: auto;
+  border: none;
+  border-radius: 5px;
+  background: rgb(15 101 87);;
+  color: #fff;
+  font-family: 'Rubik Dirt', cursive;
+  cursor: pointer;
+}
+.half-width {
+  display: inline-block;
+  margin-right: -4px;
+  width: 50%;
+}
+
+.half-width input, 
+.half-width select {
+  width: 80%;
+}
+
+.buttons {
+  text-align: center;
+}

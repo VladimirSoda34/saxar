@@ -75,7 +75,6 @@ export const SimpleSlider = ({ initialSlide = 0 }) => {
               />
               </div>
               <p>{item.title}</p>
-              
             </div>
           ))}
     </Slider>
