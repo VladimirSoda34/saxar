@@ -7,7 +7,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#advantages, #about, #store {
+  position: relative;
+  top: -60px; /* Задайте отрицательное значение, чтобы создать отступ выше якоря */
+  visibility: hidden; /* Скрыть якорь, чтобы он не занимал место на странице */
+}
+#store {
+  position: relative;
+  top: 0px; /* Задайте отрицательное значение, чтобы создать отступ выше якоря */
+  visibility: hidden; /* Скрыть якорь, чтобы он не занимал место на странице */
 }

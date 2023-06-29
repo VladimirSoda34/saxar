@@ -11,7 +11,7 @@ function MenuList({menuList}) {
     <>
     {list.map((itm, index)=>(
         <li key={index} className="menu-item">
-        <a href="#">{itm}</a>
+        <a href="#store">{itm}</a>
       </li>
     ))}
     

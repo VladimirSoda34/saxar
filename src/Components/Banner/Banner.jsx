@@ -6,8 +6,8 @@ import bannerImg from "../../images/banner.webp"
 function Banner() {
   return (
     <div className="banner">
-      <img src={bannerImg} alt="" />
-      <a href="#">
+      <img src={bannerImg} alt="buttom" />
+      <a id="simpleSider" href="#store">
         К покупкам
       </a>
     </div>

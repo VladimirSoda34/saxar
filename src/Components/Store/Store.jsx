@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import CardModal from "../CardModal/CardModal";
 
 import "./styles.css"
-import ARROW from "../../images/arrow.svg"
-
 
 function Store({cards,cardMod,setCardMod}) {
 
@@ -29,21 +27,24 @@ function Store({cards,cardMod,setCardMod}) {
 
   return (
     <>
-    
-    <div className="cat-list">
+    <div id="store"></div>
+    <div  className="cat-list">
 
-      <a href="#">  <p>Все категории</p>  <img className="arrow" src={ARROW} alt="" /></a>
+      <a href="#">  <p>Все категории</p>  <img className="arrow" src="./arrow-down.svg" alt="" /></a>
     </div>
     <div className="store-wrapper">
     {cards && cards.map((card, inx)=>(
         <div onClick={hedlerClick} key={inx} className="store-inner">
-            <div >
+            <div>
             <img id={card.id}
                 src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${card.id}/${card.field}`}
                 alt={card.name}
               />
             </div>
+            <div className="card-title__wrapper">
+
               <p>{card.title}</p>
+            </div>
         </div>
         
     ))}

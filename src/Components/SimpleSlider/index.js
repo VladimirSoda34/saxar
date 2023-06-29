@@ -1,35 +1,28 @@
 import Slider from "react-slick";
 import { useState, useEffect, useRef } from 'react';
-import axios from "axios"
 import CardModal from "../CardModal/CardModal";
 
 import "./styles.css";
 import "./slick.css";
 import "./slick-theme.css";
 
-
-const baseURL =
-  "https://pocketbase-production-176f.up.railway.app/api/collections/cards/records"
-
-export const SimpleSlider = ({ initialSlide = 0, cardMod,setCardMod }) => {
+export const SimpleSlider = ({ initialSlide = 0, cards, cardMod,setCardMod }) => {
 
   const [modal, setModal] = useState({
     modal1: false,
     modal2: false,
   });
 
-  
-
   const [hasSetPosition, setHasSetPosition] = useState(false);
-  const [cards, setCards] = useState(null)
+
+  let popCards = []
+
+  popCards.push(cards && cards.filter(card => card.is_pop === true))
 
   const slider = useRef();
 
   useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setCards(response.data.items)
-      
-    })
+    
     if (slider.current && !hasSetPosition) {
       slider.current.slickGoTo(initialSlide);
       setHasSetPosition(true);
@@ -83,8 +76,8 @@ export const SimpleSlider = ({ initialSlide = 0, cardMod,setCardMod }) => {
   return (
     <>
     <Slider ref={slider} {...settings} >
-      {cards &&
-          cards.map((item) => (
+      {popCards[0] &&
+          popCards[0].map((item) => (
             <div  className="card-wrapper"  key={item.id}>
               <div className="img-wrapper">
 

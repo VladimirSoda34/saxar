@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="window">
-      <div id="header" className={headerClass}>
+      <div onClick={handleClickHeader} id="header" className={headerClass}>
         <div onClick={handleClickHeader} className="burger-container">
           <div id="burger">
             <div className="bar topBar"></div>
@@ -54,22 +54,22 @@ function App() {
         <div className="icon icon-apple">SAXAR</div>
         <ul className="menu">
           <li className="menu-item">
-            <a href="#">Популярное</a>
+            <a href="#simpleSider">Популярное</a>
           </li>
           <MenuList menuList={menuList} />
           <br />
           <li className="menu-item">
-            <a href="#">Почему мы?</a>
+            <a href="#advantages">Почему мы?</a>
           </li>
           <li className="menu-item">
-            <a href="#">О нас</a>
+            <a href="#about">О нас</a>
           </li>
           <li className="menu-item">
             <div className="menu-links">
-              <a href="#">
+              <a href="https://www.wildberries.ru/seller/302655">
                 <img src="./WB.svg" alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.ozon.ru/seller/saxar-showroom-323675/products/?miniapp=seller_323675">
                 <img src="./OZON.svg" alt="" />
               </a>
               <a href="#">WHATSAPP</a>
@@ -80,17 +80,19 @@ function App() {
       </div>
       <div className="content">
         <Banner />
-        <p className="title" style={{ textAlign: "center" }}>
+        <p  className="title" style={{ textAlign: "center" }}>
           популярное
         </p>
       </div>
 
-      <SimpleSlider cardMod={cardMod} setCardMod={setCardMod} />
+      <SimpleSlider cards={cards} cardMod={cardMod} setCardMod={setCardMod} />
       <Store cards={cards} cardMod={cardMod} setCardMod={setCardMod}/>
       <div className="inner-container">
-        <p className="title">почему мы?</p>
+        <div id="advantages"></div>
+        <p  className="title">почему мы?</p>
         <Advantages />
-        <p className="title">
+        <div id="about"></div>
+        <p  className="title">
           Это –<br /> Saxar.Showroom
         </p>
         <AboutUs />

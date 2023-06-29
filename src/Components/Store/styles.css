@@ -34,8 +34,6 @@ margin: 75px auto 0;
     font-size: 14px;
     font-weight: 700;
     line-height: 145%;
-    /* position: absolute; */
-    /* margin: 45px auto 45px; */
     margin: 0 auto;
     
   
@@ -53,20 +51,26 @@ margin: 75px auto 0;
     width: calc(310px + 19 * ((100vw - 430px) / (1080 - 430)));
     height: calc(463px + 62 * ((100vw - 430px) / (1080 - 430)));
     flex-wrap: nowrap;
-    /* width: 310px; */
-    /* height: 463px; */
     border-radius: 10px;
 }
 
-.store-inner p{
-    margin: 0 auto 15px;
-    
-    text-align: center;
+.card-title__wrapper {
+    display: inline-block;
+    /* width: 150px; */
 }
+
+.card-title__wrapper p{
+    margin: 0 auto 15px;
+}
+
+
 
 @media (max-width: 650px) {
     .store-inner img{
         width: var(--card-width);
         height: var(--card-height);
+    }
+    .card-title__wrapper {
+        width: 150px;
     }
 }
