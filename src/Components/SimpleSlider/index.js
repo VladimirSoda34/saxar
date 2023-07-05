@@ -29,7 +29,28 @@ export const SimpleSlider = ({ initialSlide = 0, cards, cardMod,setCardMod }) =>
     }
   }, [initialSlide, hasSetPosition, slider]);
 
-  const hedlerClick = (e) => {
+  // onClick срабатывает только если между onMouseDown и onMouseUp  небыло onMouseMove
+
+  const [isMouseDown, setIsMouseDown] = useState(false);
+  const [hasMouseMove, setHasMouseMove] = useState(false);
+
+  const handleMouseDown = () => {
+    setIsMouseDown(true);
+    setHasMouseMove(false);
+  };
+
+  const handleMouseMove = () => {
+    if (isMouseDown) {
+      setHasMouseMove(true);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleClick = (e) => {
+    if (!hasMouseMove) {
     let id = ""
 
     setModal({
@@ -39,6 +60,9 @@ export const SimpleSlider = ({ initialSlide = 0, cards, cardMod,setCardMod }) =>
     id = e.target.id
     setCardMod((prevArray => [...prevArray, cards.find(obj => obj.id === id)]))
   }
+}
+// 
+    
 
   const settings = {
     dots: true,
@@ -81,7 +105,13 @@ export const SimpleSlider = ({ initialSlide = 0, cards, cardMod,setCardMod }) =>
             <div  className="card-wrapper"  key={item.id}>
               <div className="img-wrapper">
 
-              <img id={item.id} onClick={hedlerClick}
+              <img id={item.id}
+              
+              onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+              
+              onClick={handleClick}
                 src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${item.id}/${item.field}`}
                 alt={item.name}
               />

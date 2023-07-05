@@ -11,7 +11,8 @@ function Store({cards,cardMod,setCardMod}) {
     modal2: false,
   });
 
-  const hedlerClick = (e) => {
+
+  const hadleClick = (e) => {
     let id = ""
 
     setModal({
@@ -34,7 +35,7 @@ function Store({cards,cardMod,setCardMod}) {
     </div>
     <div className="store-wrapper">
     {cards && cards.map((card, inx)=>(
-        <div onClick={hedlerClick} key={inx} className="store-inner">
+        <div onClick={hadleClick} key={inx} className="store-inner">
             <div>
             <img id={card.id}
                 src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${card.id}/${card.field}`}
