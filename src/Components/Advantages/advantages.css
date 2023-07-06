@@ -21,12 +21,12 @@
   display: block;
 }
 .advantages-title {
-    font-size: 14px;
+  font-size: calc(14px + 4 * ((100vw - 650px) / (1080 - 650)));
     font-weight: 700;
     text-transform: uppercase;
 }
 .advantages-desc {
-    font-size: calc(14px + 2 * ((100vw - 1122) / (1440 - 1122)));
+  font-size: calc(14px + 2 * ((100vw - 650px) / (1080 - 650)));
     line-height: 150%;
     
 }

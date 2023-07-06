@@ -204,4 +204,12 @@ input[type="submit"] {
       left: 17px;
   }
   
- 
+  @media (min-width: 650px) {
+    .card-mod {
+      margin: 6% auto;
+    width: 330px;
+    }
+    .links-wrapper__link {
+      margin: 13px auto 0;
+    }
+}

@@ -92,8 +92,8 @@ function App() {
         <p  className="title">почему мы?</p>
         <Advantages />
         <div id="about"></div>
-        <p  className="title">
-          Это –<br /> Saxar.Showroom
+        <p  className="about-title-mob">
+          Это –<br /> Saxar Showroom
         </p>
         <AboutUs />
       </div>

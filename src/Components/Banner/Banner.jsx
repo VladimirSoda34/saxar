@@ -1,15 +1,21 @@
 import React from "react"
-import bannerImg from "../../images/banner.webp"
+import "./banner.css"
 
 
 
 function Banner() {
   return (
     <div className="banner">
-      <img src={bannerImg} alt="buttom" />
+      <p className="banner-title">Saxar Showroom</p>
+      <div className="banner-desk">
+      <div>
+        <img className="desk-img" src="./banner-desc.webp" alt="" />
+      <img className="banner-mob" src="./banner-mob.webp" alt="buttom" />
       <a id="simpleSider" href="#store">
         К покупкам
       </a>
+      </div>
+      </div>
     </div>
     
   )

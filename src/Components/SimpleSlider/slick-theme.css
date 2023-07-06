@@ -189,7 +189,7 @@
     text-align: center;
 
     opacity: .25;
-    color: white;
+    color: rgb(216, 214, 214);
     opacity: .85;
 
     -webkit-font-smoothing: antialiased;
@@ -205,6 +205,8 @@
 .slick-dots li button:before
 {
     top: -70px;
+    color: white;
+
     /* left: calc(-128px - 88 * ((100vw - 430px) / (650 - 430))); */
     /* left: -88px; */
     opacity: .85;

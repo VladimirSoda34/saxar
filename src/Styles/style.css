@@ -2,6 +2,8 @@ body p {
   margin: 0;
   font-family: "Geometria", sans-serif;
   line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .window {
@@ -26,6 +28,7 @@ body p {
   overflow: hidden;
   transition: all 0.5s ease-out, background 1s ease-out;
   transition-delay: 0.2s;
+  cursor: pointer;
   z-index: 1;
 }
 .window .header .burger-container {
@@ -38,7 +41,6 @@ body p {
   transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -242,8 +244,6 @@ body p {
 .window .content img {
   width: 100%;
   position: relative;
-  display: block;
-  margin: 50px auto 0;
 }
 @media (max-width: 1440px) {
   .window {

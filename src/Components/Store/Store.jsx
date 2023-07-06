@@ -44,7 +44,7 @@ function Store({cards,cardMod,setCardMod}) {
             </div>
             <div className="card-title__wrapper">
 
-              <p>{card.title}</p>
+              <p id={card.id}>{card.title}</p>
             </div>
         </div>
         

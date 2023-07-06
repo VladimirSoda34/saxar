@@ -1,7 +1,7 @@
 :root {
     --img-slider-less: calc(455px + 330 * ((100vw - 320px) / (650 - 320)));
-    --img-slider-mid: calc(455px + 295 * ((100vw - 430px) / (1080 - 430)));
-    /* --img-slider-mid: calc(455px + 100 * ((100vw - 430px) / (1080 - 430))); */
+    /* --img-slider-mid: calc(455px + 295 * ((100vw - 430px) / (1080 - 430))); */
+    --img-slider-mid: calc(455px + 100 * ((100vw - 430px) / (1080 - 430)));
 
    
   }
@@ -12,7 +12,7 @@
 .card-wrapper p{
     padding-left: 10px;
     margin-top: 13px;
-    font-size: 18px;
+    font-size: calc(14px + 4 * ((100vw - 650px) / (1080 - 650)));
     font-weight: bold;
 }
 

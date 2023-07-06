@@ -73,9 +73,16 @@ export const SimpleSlider = ({ initialSlide = 0, cards, cardMod,setCardMod }) =>
     initialSlide,
     responsive: [
       {
+        breakpoint: 2600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2
         }
       },
