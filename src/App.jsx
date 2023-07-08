@@ -17,7 +17,7 @@ const baseURL =
 function App() {
   const [cards, setCards] = useState(null)
   const [menuList, setMenuList] = useState([])
-  // const [cardId, setCardId] = useState("")
+  const [defCat, setDefCat] = useState([])
   const [cardMod, setCardMod] = useState([])
   const [isToggled, setIsToggled] = useState(false)
   const headerClass = `header ${isToggled && "menu-opened"}`
@@ -26,22 +26,22 @@ function App() {
     setIsToggled(!isToggled)
   }
 
-  // const cardMod = cards?.find(obj => obj.id === cardId);
+
+  let category = "Куртки"
 
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       const data = response.data.items
       setCards(data)
       setMenuList(response.data.items.map((card) => card.category))
+      setDefCat(data.filter(item => category.includes(item.category))) 
     })
   }, [])
-  
-  // console.log(menuList)
-  // console.log(cardMod)
-  
-  // console.log(cardId)
- 
 
+
+  console.log(cards, "APP");
+  
+ 
   return (
     <div className="window">
       <div onClick={handleClickHeader} id="header" className={headerClass}>
@@ -84,9 +84,10 @@ function App() {
           популярное
         </p>
       </div>
+      
 
       <SimpleSlider cards={cards} cardMod={cardMod} setCardMod={setCardMod} />
-      <Store cards={cards} cardMod={cardMod} setCardMod={setCardMod}/>
+      <Store defCat={defCat} menuList={menuList} cards={cards} cardMod={cardMod} setCardMod={setCardMod}/>
       <div className="inner-container">
         <div id="advantages"></div>
         <p  className="title">почему мы?</p>

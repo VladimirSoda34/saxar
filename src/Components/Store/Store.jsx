@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect,useState } from 'react'
 import CardModal from "../CardModal/CardModal";
 
 import "./styles.css"
 
-function Store({cards,cardMod,setCardMod}) {
+function Store({cards,defCat, menuList,cardMod,setCardMod}) {
 
+  const list = menuList.filter((value, index) => {
+    return menuList.indexOf(value) === index;
+  })
 
   const [modal, setModal] = useState({
     modal1: false,
@@ -22,19 +25,58 @@ function Store({cards,cardMod,setCardMod}) {
     id = e.target.id
     setCardMod((prevArray => [...prevArray, cards.find(obj => obj.id === id)]))
   }
-  
+
 
   
+  const [category, setCategory] = useState("Куртки")
+  useEffect(() => {
+    setCategory("Куртки")
+    setA(cards && cards.filter(item => category.includes(item.category)))
+  }, [cards])
+  console.log(cards, "ГОВГ");
+  
+  const [a,setA] = useState(cards && cards.includes(category))
+  // let renderCategory = []
 
+
+
+useEffect(() => {
+  // filterCards(category);
+  async function filterCards(category) {
+    const result = await cards;
+    
+    // renderCategory = result && result.includes(category);
+    setA(result && result.filter(item => category.includes(item.category)))
+    // setTimeout(console.log(result), 2000)
+
+
+  }
+  filterCards(category);
+}, [category])
+
+  const hadleCat = (e) => {
+    let value = e.target.value
+    setCategory(value)
+
+
+  }
+
+
+
+console.log(a);
   return (
     <>
     <div id="store"></div>
-    <div  className="cat-list">
+    <div className="test"></div>
+    <div  className="cat-list-wrapper">
+    {list.map((itm, index)=>(
+        <input onClick={hadleCat} className="cat-list" key={index} defaultValue={itm}/>
+    ))}
 
-      <a href="#">  <p>Все категории</p>  <img className="arrow" src="./arrow-down.svg" alt="" /></a>
     </div>
+    
     <div className="store-wrapper">
-    {cards && cards.map((card, inx)=>(
+    {a && a.map((card, inx)=>(
         <div onClick={hadleClick} key={inx} className="store-inner">
             <div>
             <img id={card.id}
@@ -48,7 +90,7 @@ function Store({cards,cardMod,setCardMod}) {
             </div>
         </div>
         
-    ))}
+    )) }
     </div>
     <CardModal isOpened={modal.modal1} onModalClose={() => setModal({ ...modal, modal1: false })} cardMod={cardMod} setCardMod={setCardMod}/>
     </>
