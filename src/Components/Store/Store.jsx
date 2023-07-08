@@ -3,7 +3,7 @@ import CardModal from "../CardModal/CardModal";
 
 import "./styles.css"
 
-function Store({cards,defCat, menuList,cardMod,setCardMod}) {
+function Store({cards, menuList,cardMod,setCardMod}) {
 
   const list = menuList.filter((value, index) => {
     return menuList.indexOf(value) === index;
@@ -31,52 +31,35 @@ function Store({cards,defCat, menuList,cardMod,setCardMod}) {
   const [category, setCategory] = useState("Куртки")
   useEffect(() => {
     setCategory("Куртки")
-    setA(cards && cards.filter(item => category.includes(item.category)))
+    setCategories(cards && cards.filter(item => category.includes(item.category)))
   }, [cards])
-  console.log(cards, "ГОВГ");
+  useEffect(() => {
+    setCategories(cards && cards.filter(item => category.includes(item.category)))
+  }, [category])
   
-  const [a,setA] = useState(cards && cards.includes(category))
-  // let renderCategory = []
-
-
-
-useEffect(() => {
-  // filterCards(category);
-  async function filterCards(category) {
-    const result = await cards;
-    
-    // renderCategory = result && result.includes(category);
-    setA(result && result.filter(item => category.includes(item.category)))
-    // setTimeout(console.log(result), 2000)
-
-
-  }
-  filterCards(category);
-}, [category])
+  const [categories,setCategories] = useState(cards && cards.includes(category))
 
   const hadleCat = (e) => {
-    let value = e.target.value
+    let value = e.target.attributes.name.value
     setCategory(value)
-
-
+    setActiv(value)
   }
 
+  const [activ, setActiv] = useState("Куртки")
 
-
-console.log(a);
   return (
     <>
     <div id="store"></div>
     <div className="test"></div>
-    <div  className="cat-list-wrapper">
+    <ul  className="cat-list-wrapper">
     {list.map((itm, index)=>(
-        <input onClick={hadleCat} className="cat-list" key={index} defaultValue={itm}/>
+        <li onClick={hadleCat} className={`cat-list ${activ === itm ? "activ" : ""}`} name={itm} key={index}>{itm}</li>
     ))}
 
-    </div>
+    </ul>
     
     <div className="store-wrapper">
-    {a && a.map((card, inx)=>(
+    {categories && categories.map((card, inx)=>(
         <div onClick={hadleClick} key={inx} className="store-inner">
             <div>
             <img id={card.id}

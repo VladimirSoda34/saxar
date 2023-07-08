@@ -39,7 +39,6 @@ function App() {
   }, [])
 
 
-  console.log(cards, "APP");
   
  
   return (
