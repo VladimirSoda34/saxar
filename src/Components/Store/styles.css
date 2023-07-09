@@ -21,6 +21,7 @@
 
 .cat-list {
   cursor: pointer;
+  /* padding: 5px 10px; */
   /* position: relative; */
   /* align-items: center; */
   justify-content: space-between; /* выравнивание по левому краю */
@@ -29,14 +30,14 @@
   border: 3px solid ;
   border-color: #e798c6;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-image: linear-gradient(100.03deg, #e798c6 25.36%, #9c98e6 106.07%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   border-radius: 41px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 145%;
 }
 /* .cat-list::before {

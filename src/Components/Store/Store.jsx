@@ -3,7 +3,7 @@ import CardModal from "../CardModal/CardModal";
 
 import "./styles.css"
 
-function Store({cards, menuList,cardMod,setCardMod}) {
+function Store({setCategory, category, activ, setActiv, cards, menuList,cardMod,setCardMod}) {
 
   const list = menuList.filter((value, index) => {
     return menuList.indexOf(value) === index;
@@ -28,24 +28,23 @@ function Store({cards, menuList,cardMod,setCardMod}) {
 
 
   
-  const [category, setCategory] = useState("Куртки")
+  // const [category, setCategory] = useState("Куртки")
   useEffect(() => {
     setCategory("Куртки")
     setCategories(cards && cards.filter(item => category.includes(item.category)))
   }, [cards])
+
   useEffect(() => {
     setCategories(cards && cards.filter(item => category.includes(item.category)))
   }, [category])
   
   const [categories,setCategories] = useState(cards && cards.includes(category))
 
-  const hadleCat = (e) => {
-    let value = e.target.attributes.name.value
-    setCategory(value)
-    setActiv(value)
+  const hadleCat = (itm) => {
+    setCategory(itm)
+    setActiv(itm)
   }
 
-  const [activ, setActiv] = useState("Куртки")
 
   return (
     <>
@@ -53,7 +52,7 @@ function Store({cards, menuList,cardMod,setCardMod}) {
     <div className="test"></div>
     <ul  className="cat-list-wrapper">
     {list.map((itm, index)=>(
-        <li onClick={hadleCat} className={`cat-list ${activ === itm ? "activ" : ""}`} name={itm} key={index}>{itm}</li>
+        <li onClick={()=>hadleCat(itm)} className={`cat-list ${activ === itm ? "activ" : ""}`} key={index}>{itm}</li>
     ))}
 
     </ul>

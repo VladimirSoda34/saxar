@@ -19,6 +19,10 @@ function App() {
   const [menuList, setMenuList] = useState([])
   const [defCat, setDefCat] = useState([])
   const [cardMod, setCardMod] = useState([])
+  const [activ, setActiv] = useState("Куртки")
+  const [category, setCategory] = useState("Куртки")
+
+
   const [isToggled, setIsToggled] = useState(false)
   const headerClass = `header ${isToggled && "menu-opened"}`
 
@@ -27,14 +31,14 @@ function App() {
   }
 
 
-  let category = "Куртки"
+  let defCategory = "Куртки"
 
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       const data = response.data.items
       setCards(data)
       setMenuList(response.data.items.map((card) => card.category))
-      setDefCat(data.filter(item => category.includes(item.category))) 
+      setDefCat(data.filter(item => defCategory.includes(item.category))) 
     })
   }, [])
 
@@ -55,7 +59,7 @@ function App() {
           <li className="menu-item">
             <a href="#simpleSider">Популярное</a>
           </li>
-          <MenuList menuList={menuList} />
+          <MenuList setActiv={setActiv} setCategory={setCategory} menuList={menuList} />
           <br />
           <li className="menu-item">
             <a href="#advantages">Почему мы?</a>
@@ -86,7 +90,7 @@ function App() {
       
 
       <SimpleSlider cards={cards} cardMod={cardMod} setCardMod={setCardMod} />
-      <Store defCat={defCat} menuList={menuList} cards={cards} cardMod={cardMod} setCardMod={setCardMod}/>
+      <Store category={category} setCategory={setCategory} activ={activ} setActiv={setActiv} defCat={defCat} menuList={menuList} cards={cards} cardMod={cardMod} setCardMod={setCardMod}/>
       <div className="inner-container">
         <div id="advantages"></div>
         <p  className="title">почему мы?</p>
