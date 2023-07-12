@@ -12,11 +12,11 @@
 }
 
 .cat-list-wrapper {
-  margin: 70px auto 0;
+  margin: 70px 0 0 15px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .cat-list {
@@ -26,7 +26,7 @@
   /* align-items: center; */
   justify-content: space-between; /* выравнивание по левому краю */
   /* text-align: center; */
-  margin: 10px auto 5px;
+  margin: 10px 5px 5px;
   border: 3px solid ;
   border-color: #e798c6;
   text-decoration: none;
@@ -36,7 +36,7 @@
   -webkit-background-clip: text;
   color: transparent;
   border-radius: 41px;
-  font-size: 16px;
+  font-size: calc(12px + 4 * ((100vw - 320px) / (1080 - 320)));
   font-weight: 800;
   line-height: 145%;
 }
@@ -66,7 +66,7 @@
 }
 .store-inner img {
   width: calc(300px + 19 * ((100vw - 430px) / (1080 - 430)));
-  height: calc(457px + 62 * ((100vw - 430px) / (1080 - 430)));
+  /* height: calc(457px + 62 * ((100vw - 430px) / (1080 - 430))); */
   flex-wrap: nowrap;
   border-radius: 10px;
 }
@@ -78,7 +78,7 @@
 
 .card-title__wrapper p {
   margin: 0 auto 15px;
-  font-size: calc(14px + 4 * ((100vw - 650px) / (1080 - 650)));
+  font-size: calc(18px + 4 * ((100vw - 650px) / (1080 - 650)));
 }
 
 .activ {

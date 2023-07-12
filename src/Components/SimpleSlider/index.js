@@ -119,7 +119,7 @@ export const SimpleSlider = ({ initialSlide = 0, cards, cardMod,setCardMod }) =>
       onMouseUp={handleMouseUp}
               
               onClick={handleClick}
-                src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${item.id}/${item.field}`}
+                src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${item.id}/${item.field[0]}`}
                 alt={item.name}
               />
               </div>

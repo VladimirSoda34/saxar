@@ -26,6 +26,7 @@
   line-height: 145%;
   position: absolute;
   margin-top: -22px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -40,6 +41,7 @@
   .banner {
     flex-direction: column-reverse;
   }
+
   .banner-title {
     display: block;
   }
