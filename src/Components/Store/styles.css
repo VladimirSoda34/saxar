@@ -27,7 +27,7 @@
   justify-content: space-between; /* выравнивание по левому краю */
   /* text-align: center; */
   margin: 10px 5px 5px;
-  border: 3px solid ;
+  border: 2px solid ;
   border-color: #e798c6;
   text-decoration: none;
   padding: 10px 20px;
@@ -37,7 +37,7 @@
   color: transparent;
   border-radius: 41px;
   font-size: calc(12px + 4 * ((100vw - 320px) / (1080 - 320)));
-  font-weight: 800;
+  font-weight: 500;
   line-height: 145%;
 }
 /* .cat-list::before {
@@ -83,11 +83,14 @@
 
 .activ {
   color: white;
-  background: linear-gradient(100.03deg, #E798C6 25.36%, #9C98E6 106.07%);
+  background: linear-gradient(100.03deg, #f381c3 25.36%, #7c75ef 106.07%);
   border: none;
 }
 
 @media (max-width: 650px) {
+.cat-list-wrapper {
+  margin: 25px 0 0 15px;
+}
   .store-inner img {
     width: var(--card-width);
     height: var(--card-height);

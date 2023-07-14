@@ -17,6 +17,11 @@ body p {
   border-radius: 3px;
   background: #FFF;
 }
+.window .desc {
+  width: 100%;
+  transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
 .window .header {
   position: absolute;
   display: block;
@@ -24,7 +29,7 @@ body p {
   left: 0;
   height: 50px;
   width: 100%;
-  background: linear-gradient(100.03deg, #E798C6 25.36%, #9C98E6 106.07%);
+  background: linear-gradient(100.03deg, #f381c3 25.36%, #7c75ef 106.07%);
   overflow: hidden;
   transition: all 0.5s ease-out, background 1s ease-out;
   transition-delay: 0.2s;
@@ -76,8 +81,8 @@ body p {
   height: 50px;
   text-align: center;
   color: #FFF;
-  font-size: 22px;
-  left: 50%;
+  font-size: 18px;
+  left: 46%;
   transform: translateX(-50%);
 }
 .window .header .icon.icon-bag {
@@ -254,6 +259,7 @@ body p {
   }
   .window .header {
     position: fixed;
+    z-index: 100;
   }
 }
 @media (max-width: 600px) {
@@ -265,5 +271,17 @@ body p {
   }
   .window .header {
     position: fixed;
+  }
+}
+@media (min-width: 650px) {
+  .window .header {
+    transition-delay: 0.6s;
+  }
+  .window .header.menu-opened {
+    border-radius: 0px 20px 20px 0px;
+  }
+  .window .desc {
+    width: 45%;
+    transition: width 5s ease-in-out;
   }
 }/*# sourceMappingURL=style.css.map */

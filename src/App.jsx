@@ -24,7 +24,7 @@ function App() {
 
 
   const [isToggled, setIsToggled] = useState(false)
-  const headerClass = `header ${isToggled && "menu-opened"}`
+  const headerClass = `header ${isToggled && "desc menu-opened"}`
 
   const handleClickHeader = () => {
     setIsToggled(!isToggled)
@@ -54,7 +54,7 @@ function App() {
             <div className="bar btmBar"></div>
           </div>
         </div>
-        <div className="icon icon-apple">SAXAR</div>
+        <div className="icon icon-apple"><div className="header-logo"><img className="logo-inner" src="./logo.png" width="30" height="30" alt="logo" />SAXAR</div></div>
         <ul className="menu">
           <li className="menu-item">
             <a href="#simpleSider">Популярное</a>
@@ -70,22 +70,33 @@ function App() {
           <li className="menu-item">
             <div className="menu-links">
               <a href="https://www.wildberries.ru/seller/302655">
-                <img src="./WB.svg" alt="" />
+                <img src="./WB.svg" alt="WB" />
               </a>
               <a href="https://www.ozon.ru/seller/saxar-showroom-323675/products/?miniapp=seller_323675">
-                <img src="./OZON.svg" alt="" />
+                <img src="./OZON.svg" alt="OZON" />
               </a>
-              <a href="#">WHATSAPP</a>
+              <a href="https://wa.me/79102139441">
+                <img src="./whatsapp.svg" alt="whatsapp" />
+              </a>
             </div>
+            <br />
+          </li>
+          <li className="menu-item">
+          <a className="tele-link" href="https://t.me/SaxRoM_bot">
+                <img width="47" src="./telegram.svg" alt="OZON" /><p>Поддержка</p>
+               </a>
           </li>
         </ul>
         <div className="shop icon icon-bag"></div>
       </div>
       <div className="content">
         <Banner />
-        <p  className="title" style={{ textAlign: "center" }}>
+        <div id="simpleSider"></div>
+
+        <div className="title-pop"><p  className="title">
           популярное
-        </p>
+        </p></div>
+        
       </div>
       
 

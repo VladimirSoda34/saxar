@@ -9,9 +9,12 @@ function Banner() {
       <p className="banner-title">Saxar Showroom</p>
       <div className="banner-desk">
       <div>
-        <img className="desk-img" src="./banner-desc.webp" alt="" />
+       <a className="button-top" /*id="simpleSider"*/ href="#store"> 
+        К покупкам
+      </a>
+        <img className="desk-img" src="./banner-desc.webp" alt="desk-img" />
       <img className="banner-mob" src="./banner-mob.webp" alt="buttom" />
-      <a id="simpleSider" href="#store">
+      <a className="button-bottom" /*id="simpleSider"*/  href="#store">
         К покупкам
       </a>
       </div>

@@ -1,8 +1,9 @@
 .footer-wrapper {
-  background: linear-gradient(100.03deg, #e798c6 25.36%, #9c98e6 106.07%);
+  background: linear-gradient(100.03deg, #f381c3 25.36%, #7c75ef 106.07%);
   color: white;
-  padding: 30px 10px 0;
+  padding: 30px 10px 5px;
   margin: 50px auto 0;
+
 }
 
 .footer-login {
@@ -21,12 +22,19 @@
   justify-content: space-between;
   padding-bottom: 5px;
 }
+.footer-polit a {
+  text-decoration: underline;
+}
 .footer-polit p {
   font-weight: normal;
   font-size: 10px;
 }
 .footer-links {
+  margin: 15px 0;
+}
+.footer-links a{
   font-size: 14px;
+
   text-transform: uppercase;
 }
 

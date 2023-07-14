@@ -1,5 +1,18 @@
-a {
+/* a {
   text-decoration: none;
+} */
+
+.cards-stok-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards-stok-wrapper img{
+/* width: 50px; */
+cursor: pointer;
+height: 54px;
+border-radius: 5px;
 }
 
 .modal__wrapper {
@@ -158,7 +171,7 @@ input[type="submit"] {
 }
 
 .links-wrapper {
-  background: linear-gradient(100.03deg, #e798c6 25.36%, #9c98e6 106.07%);
+  background: linear-gradient(100.03deg, #f381c3 25.36%, #7c75ef 106.07%);
   border-radius: 10px;
 }
 
@@ -205,6 +218,10 @@ input[type="submit"] {
   }
   
   @media (min-width: 650px) {
+    .cards-stok-wrapper img{
+
+  height: 65px;
+}
     .card-mod {
       margin: 6% auto;
     width: 330px;
