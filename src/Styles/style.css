@@ -2,7 +2,7 @@ body p {
   margin: 0;
   font-family: "Geometria", sans-serif;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -15,7 +15,7 @@ body p {
   box-shadow: 0 0 65px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border-radius: 3px;
-  background: #FFF;
+  background: #fff;
 }
 .window .desc {
   width: 100%;
@@ -62,7 +62,7 @@ body p {
   height: 1px;
   display: block;
   position: relative;
-  background: #FFF;
+  background: #fff;
   transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transition-delay: 0s;
 }
@@ -80,7 +80,7 @@ body p {
   width: 50px;
   height: 50px;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   left: 46%;
   transform: translateX(-50%);
@@ -152,7 +152,7 @@ body p {
 }
 .window .header ul.menu li.menu-item a {
   position: relative;
-  color: #FFF;
+  color: #fff;
   font-family: "Geometria", sans-serif;
   font-weight: 100;
   text-decoration: none;

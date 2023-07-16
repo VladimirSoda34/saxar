@@ -32,11 +32,11 @@ function Advantages() {
         <div key={index} className="advantages-inner">
             <div className="wrapper-img">
                 
-          <div className="advantages-title">{itm.title}</div>
           <div className="advantages-img">
 
           <img  src={`./advantages-${itm.id}.svg`} alt="img" />
           </div>
+          <div className="advantages-title">{itm.title}</div>
             </div>
           <div className="advantages-desc">{itm.desc}</div>
         </div>

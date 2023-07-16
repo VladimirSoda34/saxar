@@ -1,38 +1,30 @@
-/* a {
-  text-decoration: none;
-} */
-
 .cards-stok-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.cards-stok-wrapper img{
-/* width: 50px; */
-cursor: pointer;
-height: 54px;
-border-radius: 5px;
+.cards-stok-wrapper img {
+  cursor: pointer;
+  height: 54px;
+  border-radius: 5px;
 }
 
 .modal__wrapper {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   z-index: -1;
   opacity: 0;
   visibility: hidden;
-  /* transition: backdrop-filter 0.3s ease-in-out; */
   transition: opacity 0.3s ease-out;
-  
 }
 
 .modal__wrapper.open {
   height: 100%;
   z-index: 100;
-  /* transition: all 300ms ease-out; */
   opacity: 1;
   visibility: visible;
 }
@@ -58,23 +50,22 @@ border-radius: 5px;
 
 .modal__close {
   text-align: right;
-  /* margin-top: -15px; */
   color: rgb(79, 79, 79);
   cursor: pointer;
 }
 
 .titlePurchase {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 28px;
   font-weight: 700;
   text-align: center;
 }
 
 .listPurchase {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 24px;
   font-weight: 500;
-  
+
   color: rgb(118, 63, 132);
 }
 
@@ -82,15 +73,12 @@ border-radius: 5px;
   margin: 10px 0 10px 5px;
 }
 
-
 .totalPrise {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 24px;
   color: rgb(15 101 87);
   font-weight: 700;
-
 }
-
 
 .purchase {
   display: none;
@@ -104,8 +92,8 @@ legend {
 .card-mod {
   margin: 15% auto;
   padding: 20px;
-  width: 256px; 
-  background:white;
+  width: 256px;
+  background: white;
   border-radius: 10px;
   box-shadow: 0 0 30px rgb(85, 61, 86);
 }
@@ -122,7 +110,6 @@ select {
   height: 24px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  /* font-family: "Roboto"; */
 }
 input[type="submit"] {
   display: inline-block;
@@ -131,9 +118,9 @@ input[type="submit"] {
   width: auto;
   border: none;
   border-radius: 5px;
-  background: rgb(15 101 87);;
+  background: rgb(15 101 87);
   color: #fff;
-  font-family: 'Rubik Dirt', cursive;
+  font-family: "Rubik Dirt", cursive;
   cursor: pointer;
 }
 .half-width {
@@ -142,7 +129,7 @@ input[type="submit"] {
   width: 50%;
 }
 
-.half-width input, 
+.half-width input,
 .half-width select {
   width: 80%;
 }
@@ -154,11 +141,9 @@ input[type="submit"] {
 .card-mod__inner {
   width: 100%;
   margin: 0 auto;
-  
 }
 
-.card-mod__inner__img{
- 
+.card-mod__inner__img {
   width: 100%;
   border-radius: 10px;
   margin: 0 auto;
@@ -166,7 +151,7 @@ input[type="submit"] {
   margin-bottom: 15px;
 }
 
-.card-mod__inner p{
+.card-mod__inner p {
   font-size: 14px;
 }
 
@@ -178,55 +163,50 @@ input[type="submit"] {
 .links-wrapper__link {
   width: calc(100% - 20px);
   margin: 40px auto 0;
-  
-  }
-
-  .link-title {
-    padding-top: 12px;
-    color: white;
-
-  }
-  .links-wrapper {
-    margin: 15px auto;
-  }
-  .links-wrapper:last-child {
-    padding-bottom: 1px;
-  }
-  .links-wrapper__link a{
-  
-      display: flex;
-      align-items: center;
-      justify-content: space-between; 
-      text-align: center;
-      text-decoration: none;
-      padding: 4px 21px;
-      color: #D7699C;
-      background: white;
-      border-radius: 48px;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 145%;
-    
-  }
-  
-  .arrow {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      left: 17px;
-  }
-  
-  @media (min-width: 650px) {
-    .cards-stok-wrapper img{
-
-  height: 65px;
 }
-    .card-mod {
-      margin: 6% auto;
+
+.link-title {
+  padding-top: 12px;
+  color: white;
+}
+.links-wrapper {
+  margin: 15px auto;
+}
+.links-wrapper:last-child {
+  padding-bottom: 1px;
+}
+.links-wrapper__link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px 21px;
+  color: #d7699c;
+  background: white;
+  border-radius: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 145%;
+}
+
+.arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  left: 17px;
+}
+
+@media (min-width: 650px) {
+  .cards-stok-wrapper img {
+    height: 65px;
+  }
+  .card-mod {
+    margin: 6% auto;
     width: 330px;
-    }
-    .links-wrapper__link {
-      margin: 13px auto 0;
-    }
+  }
+  .links-wrapper__link {
+    margin: 13px auto 0;
+  }
 }

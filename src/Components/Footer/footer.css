@@ -3,7 +3,6 @@
   color: white;
   padding: 30px 10px 5px;
   margin: 50px auto 0;
-
 }
 
 .footer-login {
@@ -32,7 +31,7 @@
 .footer-links {
   margin: 15px 0;
 }
-.footer-links a{
+.footer-links a {
   font-size: 14px;
 
   text-transform: uppercase;
@@ -54,7 +53,4 @@
   .footer-links {
     margin: 33px auto 0;
   }
-  /* .footer-polit {
-    display: flex;
-  } */
 }

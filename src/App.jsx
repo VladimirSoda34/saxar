@@ -54,7 +54,7 @@ function App() {
             <div className="bar btmBar"></div>
           </div>
         </div>
-        <div className="icon icon-apple"><div className="header-logo"><img className="logo-inner" src="./logo.png" width="30" height="30" alt="logo" />SAXAR</div></div>
+        <div className="icon icon-apple"><div className="header-logo"><img className="logo-inner" src="./logo.svg" width="50" height="50" alt="logo" />SAXAR</div></div>
         <ul className="menu">
           <li className="menu-item">
             <a href="#simpleSider">Популярное</a>
@@ -78,13 +78,13 @@ function App() {
               <a href="https://wa.me/79102139441">
                 <img src="./whatsapp.svg" alt="whatsapp" />
               </a>
+          <a className="tele-link" href="https://t.me/SaxRoM_bot">
+                <img src="./telegram.svg" alt="OZON" />
+               </a>
             </div>
             <br />
           </li>
           <li className="menu-item">
-          <a className="tele-link" href="https://t.me/SaxRoM_bot">
-                <img width="47" src="./telegram.svg" alt="OZON" /><p>Поддержка</p>
-               </a>
           </li>
         </ul>
         <div className="shop icon icon-bag"></div>

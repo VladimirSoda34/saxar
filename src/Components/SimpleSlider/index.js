@@ -70,7 +70,6 @@ export const SimpleSlider = ({
   //
 
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -103,6 +102,8 @@ export const SimpleSlider = ({
         breakpoint: 650,
         settings: {
     arrows: false,
+    dots: true,
+
           slidesToShow: 1,
           slidesToScroll: 1,
         },

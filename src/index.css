@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/geometria');
 body {
+  background-color: #FBFBFB;
+
   margin: 0;
   font-family: 'Geometria', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +17,7 @@ code {
     monospace;
 }
 
-#advantages, #about, #store {
+#simpleSider,#advantages, #about, #store {
   position: relative;
   top: -60px; /* Задайте отрицательное значение, чтобы создать отступ выше якоря */
   visibility: hidden; /* Скрыть якорь, чтобы он не занимал место на странице */
@@ -26,8 +28,3 @@ code {
   visibility: hidden; /* Скрыть якорь, чтобы он не занимал место на странице */
 }
 
-/* @media (min-width: 650px) {
-  body {
-    background-color: #FBFBFB;;
-  }
-} */
