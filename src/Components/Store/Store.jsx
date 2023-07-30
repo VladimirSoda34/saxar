@@ -62,7 +62,7 @@ function Store({setCategory, category, activ, setActiv, cards, menuList,cardMod,
         <div onClick={hadleClick} key={inx} className="store-inner">
             <div>
             <img id={card.id}
-                src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${card.id}/${card.field[0]}`}
+                src={`https://saxaroom.fvds.ru:8090/api/files/4s1neb5hsp69xyo/${card.id}/${card.field[0]}`}
                 alt={card.name}
               />
             </div>

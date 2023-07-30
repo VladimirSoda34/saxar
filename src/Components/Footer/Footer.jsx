@@ -1,8 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
+import PoliticModal from "../CardModal/PoliticModal";
+
 import './footer.css'
 
 function Footer() {
+
+  const [modal, setModal] = useState({
+    modal1: false,
+    modal2: false,
+  });
+
+  const hadleClick = (e) => {
+    e.preventDefault()
+
+    setModal({
+      ...modal,
+      modal1: true,
+    });
+    
+  }
+
   return (
+    <>
     <div className="footer-wrapper">
       <div className='footer-inner'>
         
@@ -15,9 +34,10 @@ function Footer() {
         </div>
 
       </div>
-      <div className='footer-polit'><p>Все права защищены © 2023  </p><a href="https://rosstat.gov.ru/politika-konfidencialnosti"><p>Политика конфиденциальности</p></a></div>
-        
+      <div className='footer-polit'><p>Все права защищены © 2023  </p><a onClick={hadleClick} href="#"><p>Политика конфиденциальности</p></a></div>
     </div>
+      <PoliticModal isOpened={modal.modal1} onModalClose={() => setModal({ ...modal, modal1: false })}/>
+    </>
   )
 }
 

@@ -8,11 +8,21 @@ a {
   color: white;
 }
 .header-logo {
+  display: -webkit-box; /* Safari 6-9.0 */
+  display: -webkit-flex; /* Safari 9.1-10 */
   display: flex;
 }
 
+.menu-wrapper {
+  display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 25px;
+}
+
 .menu-links {
-  padding-top: 50px;
+  padding-bottom: 70px;
 }
 .menu-links a {
   display: inline;

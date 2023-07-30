@@ -10,7 +10,6 @@ const CardModal = (props) => {
     props.setCardMod([])
   }
   const hendlerCloseShud =(e) => {
-    console.log(e.target.className);
     const lid = e.target.className
     if (lid === "modal__wrapper open" || lid === "modal__body") {
       setFoto(null)
@@ -26,7 +25,6 @@ const CardModal = (props) => {
   }
 
 
-  console.log(foto);
 
   return (
     <>
@@ -42,19 +40,20 @@ const CardModal = (props) => {
                 <div className="modal__close" onClick={hendlerClose}>
                   ✖
                 </div>
-                <div className="card-mod__inner">
+                <div className="card-mod__inner"> <div className="img-container">
+
                   <img
                     className="card-mod__inner__img"
-                    src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${card.id}/${foto !== null ? foto : card.field[0]}`}
-                    // src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${card.id}/${foto !== null ? foto : card.field[0]}`}
+                    src={`https://saxaroom.fvds.ru:8090/api/files/4s1neb5hsp69xyo/${card.id}/${foto !== null ? foto : card.field[0]}`}
                     alt={card.name}
                   />
+                </div>
                     <p>{card.title}</p>
 
                   <div className="cards-stok-wrapper">
                     {card.field && card.field.map((itm, index) =>  (
                       <>
-                    <img onClick={hadleClick} id={itm} key={index}  src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${card.id}/${itm}`} alt="card" />
+                    <img onClick={hadleClick} id={itm} key={index}  src={`https://saxaroom.fvds.ru:8090/api/files/4s1neb5hsp69xyo/${card.id}/${itm}`} alt="card" />
                     
                         </>
                     ))}

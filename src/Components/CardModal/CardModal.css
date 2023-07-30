@@ -143,12 +143,16 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
-.card-mod__inner__img {
-  width: 100%;
+.img-container {
+  max-height: 341px;
+  overflow: hidden;
   border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 15px;
   margin-bottom: 15px;
+  margin-top: 15px;
+}
+.card-mod__inner__img {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .card-mod__inner p {
@@ -198,6 +202,24 @@ input[type="submit"] {
   left: 17px;
 }
 
+/* Polit */
+.modal__body-polit {
+  margin: auto;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.card-mod-polit {
+  margin: 5% 5%;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+}
+
+.polit-title {
+  font-weight: 600;
+}
+
 @media (min-width: 650px) {
   .cards-stok-wrapper img {
     height: 65px;
@@ -206,7 +228,18 @@ input[type="submit"] {
     margin: 6% auto;
     width: 330px;
   }
+  .img-container {
+    max-height: 421px;
+  }
   .links-wrapper__link {
     margin: 13px auto 0;
+  }
+  .card-mod-polit {
+    margin: 10% 10%;
+
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(85, 61, 86);
   }
 }

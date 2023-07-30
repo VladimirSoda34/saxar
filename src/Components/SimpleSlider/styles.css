@@ -9,6 +9,11 @@
   font-size: calc(18px + 4 * ((100vw - 650px) / (1080 - 650)));
 }
 
+.img-wrapper {
+  /* max-width: 100%;
+  overflow: hidden; */
+}
+
 .img-wrapper img {
   width: 95%;
 

@@ -12,7 +12,9 @@ import "./Styles/style.css"
 import "./Styles/app.css"
 
 const baseURL =
-  "https://pocketbase-production-176f.up.railway.app/api/collections/cards/records"
+  "https://saxaroom.fvds.ru:8090/api/collections/cards/records"
+// const baseURL =
+//   "https://pocketbase-production-176f.up.railway.app/api/collections/cards/records"
 
 function App() {
   const [cards, setCards] = useState(null)
@@ -55,6 +57,8 @@ function App() {
           </div>
         </div>
         <div className="icon icon-apple"><div className="header-logo"><img className="logo-inner" src="./logo.svg" width="50" height="50" alt="logo" />SAXAR</div></div>
+        <div className="menu-wrapper">
+
         <ul className="menu">
           <li className="menu-item">
             <a href="#simpleSider">Популярное</a>
@@ -68,6 +72,9 @@ function App() {
             <a href="#about">О нас</a>
           </li>
           <li className="menu-item">
+          </li>
+        </ul>
+          <div className="menu-item">
             <div className="menu-links">
               <a href="https://www.wildberries.ru/seller/302655">
                 <img src="./WB.svg" alt="WB" />
@@ -75,19 +82,18 @@ function App() {
               <a href="https://www.ozon.ru/seller/saxar-showroom-323675/products/?miniapp=seller_323675">
                 <img src="./OZON.svg" alt="OZON" />
               </a>
-              <a href="https://wa.me/79102139441">
-                <img src="./whatsapp.svg" alt="whatsapp" />
-              </a>
-          <a className="tele-link" href="https://t.me/SaxRoM_bot">
-                <img src="./telegram.svg" alt="OZON" />
+              <a className="tele-link" href="https://t.me/SaxRoM_bot">
+                <img src="./whatsapp.svg" alt="OZON" />
                </a>
+              <a href="https://wa.me/79102139441">
+                <img src="./telegram.svg" alt="whatsapp" />
+              </a>
+          
             </div>
             <br />
-          </li>
-          <li className="menu-item">
-          </li>
-        </ul>
-        <div className="shop icon icon-bag"></div>
+          </div>
+        </div>
+        {/* <div className="shop icon icon-bag"></div> */}
       </div>
       <div className="content">
         <Banner />

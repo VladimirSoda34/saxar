@@ -124,7 +124,7 @@ export const SimpleSlider = ({
                   onMouseMove={handleMouseMove}
                   onMouseUp={handleMouseUp}
                   onClick={handleClick}
-                  src={`https://pocketbase-production-176f.up.railway.app/api/files/4s1neb5hsp69xyo/${item.id}/${item.field[0]}`}
+                  src={`https://saxaroom.fvds.ru:8090/api/files/4s1neb5hsp69xyo/${item.id}/${item.field[0]}`}
                   alt={item.name}
                 />
               </div>

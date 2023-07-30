@@ -23,7 +23,7 @@ body p {
   border-radius: 3px;
   background: #fff;
   .desc {
-    width: 100%;
+    width: 16%;
     transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
   }
@@ -85,8 +85,8 @@ body p {
       text-align: center;
       color: #fff;
       font-size: 18px;
-      left: 46%;
-      transform: translateX(-50%);
+      right: 15%;
+      transform: translateX(-67%);
       &.icon-bag {
         right: 0;
         top: 0;
@@ -99,7 +99,7 @@ body p {
     ul.menu {
       position: relative;
       display: block;
-      padding: 0px 25px 0;
+      padding: 0;
       list-style: none;
       li.menu-item {
         margin-top: 5px;
@@ -192,15 +192,6 @@ body p {
       z-index: 100;
     }
   }
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-radius: 0px;
-    .header {
-      position: fixed;
-    }
-  }
   @media (min-width: 650px) {
     .header {
       transition-delay: 0.6s;
@@ -209,10 +200,17 @@ body p {
         border-radius: 0px 20px 20px 0px;
       }
     }
+    .header .icon {
+      left: 46%;
+      transform: translateX(0);
+    }
+
 
     .desc {
-      width: 45%;
+      width: 300px;
+      // 292px
       transition: width 5s ease-in-out;
     }
   }
+
 }
